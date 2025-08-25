@@ -40,3 +40,22 @@ heres the threshold for missing data:
 - More than 10% → analyses are prone to bias.
 - More than 40% missing in key variables → results should be treated as exploratory or hypothesis-generating only.
 reference: https://doi.org/10.1016/j.jclinepi.2019.02.016 
+
+Since the selected variables have less than 5% missing data, data deletion can be a suitable option for handling missing data (there are several other methods to handle missing data, which will be discussed in another section)
+
+## Correct Data Types
+- Check if numbers look like text (e.g., 1,0).
+In the data grid:
+    1. Right-click the column → Change column type → set to Scale (numeric).
+       
+       <img width="616" height="272" alt="image" src="https://github.com/user-attachments/assets/fbb92e64-f9e2-4fa6-ae92-d50ff48e7138" />
+
+    3. If commas are used as decimals, JASP might interpret them as text.
+        Quick fix: Open the file in Excel/LibreOffice, replace , with ., and re-            import.
+
+## Recode Variables
+Example: gender is stored as 0,0 and 1,0. You can recode into: 0 = Male, 1 = Female (or vice versa).
+
+## Remove Irrelevant Columns
+If you don’t need No Data, Jumlah Missing Data, % Missing Data:
+    Right-click the column header → Remove column.
